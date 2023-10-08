@@ -1,5 +1,6 @@
 class StoreController < ApplicationController
-
+  include CurrentCart
+  before_action :set_cart  
   before_action :set_visit_counter, only: %i[ index ]
 
   def index
